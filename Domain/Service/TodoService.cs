@@ -21,7 +21,7 @@ namespace Domain.Service
             return _todoRepository.CreateTodoItem(item);
         }
 
-        public List<TodoItem> getAllTodoItems()
+        public List<TodoItem> GetAllTodoItems()
         {
             return _todoRepository.getAllTodoItems();
         }
