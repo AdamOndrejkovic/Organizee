@@ -56,7 +56,8 @@ pipeline {
                     }
             }
         }
-        post {
+    }
+    post {
         always {
             withCredentials([string(credentialsId: 'DiscordWebHook', variable: 'WEBHOOK_URL')]) {
                 sh "echo 'Pipeline finished!'"
@@ -87,6 +88,5 @@ pipeline {
                 discordSend description: "Jenkins Pipeline Changed", footer: "Pipeline's state changed", link: env.Build_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "${WEBHOOK_URL}"
             }
         }
-    }
     }
 }
