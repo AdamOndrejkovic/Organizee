@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Linq;
+using System.Text;
 using Core.Models;
 using DataAccess;
 using DataAccess.Entities;
@@ -19,7 +20,7 @@ namespace Security.Repository
 
         public User GetUser(string name)
         {
-            var userByName = _organizeeDb.Users.FirstOrDefault(user => name.Equals(user.Id));
+            var userByName = _organizeeDb.Users.FirstOrDefault(user => name.Equals(user.Name));
             if (userByName != null)
             {
                 return new User()
@@ -27,7 +28,7 @@ namespace Security.Repository
                     Id = userByName.Id,
                     Name = userByName.Name,
                     HashedPassword = userByName.HashedPassword,
-                    /*Salt = userByName.Salt.ToString()*/
+                    Salt = Encoding.ASCII.GetBytes(userByName.Salt),
                 };
             }
 
@@ -49,8 +50,11 @@ namespace Security.Repository
 
             _organizeeDb.Users.Attach(user).State = EntityState.Added;
             _organizeeDb.SaveChanges();
-            /*Return added user*/
-            return null;
+            return new User()
+            {
+                Name = name,
+                HashedPassword = hashedPassword,
+            };
         }
     }
 }
