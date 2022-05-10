@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: "WebApi"
+    image: "localhost:3000/organizee:${IMAGE_TAG}"
+    container_name: "${API_CONT_NAME}"
+    ports:
+      - "${API_PORT}:80"
+    depends_on:
+      - "db"
+    environment:
+      - DB_CONNECTION_STRING=Server=${DB_CONT_NAME},1433;Initial Catalog=WeatherForecast;User ID=sa;Password=yourStrongP@ssword;MultipleActiveResultSets=True;
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: "${DB_CONT_NAME}"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrongP@ssword
+    ports:
+      - "${DB_PORT}:1433"
+    volumes:
+      - organizee:/var/opt/mssql:rw
+volumes:
+    organizee:

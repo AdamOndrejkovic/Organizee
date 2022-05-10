@@ -41,6 +41,7 @@ pipeline {
                 dir("Api"){
                     sh "dotnet build --configuration Release"
                 }
+                sh "docker-compose --env-file config/Test.env build api"
             }
         }
         stage("Unit Test"){
@@ -54,6 +55,26 @@ pipeline {
                     success {
                         publishCoverage adapters: [coberturaAdapter('Core.Test/TestResults/*/coverage.cobertura.xml')], sourceFileResolver: sourceFiles('NEVER_STORE')
                     }
+            }
+        }
+        stage("Clean containers") {
+            steps {
+                script {
+                    try {
+                        sh "docker-compose --env-file config/Test.env down"
+                    }
+                    finally { }
+                }
+            }
+        }
+        stage("Deploy"){
+            steps {
+                 sh "docker-compose --env-file config/Test.env up -d"
+            }
+        }
+        stage("Push images to registry") {
+             steps {
+                sh "docker-compose --env-file config/Test.env push"
             }
         }
     }
