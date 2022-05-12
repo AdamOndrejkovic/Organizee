@@ -1,5 +1,6 @@
 ﻿namespace Core.Models
 {
+    // Todo item
     public class TodoItem
     {
         public int Id { get; set; }
