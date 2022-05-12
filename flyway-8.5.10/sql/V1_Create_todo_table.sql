@@ -1,5 +1,5 @@
 
-create table Todos
+create Table Todos
 (
     Id int not null
         constraint PK_Todos
