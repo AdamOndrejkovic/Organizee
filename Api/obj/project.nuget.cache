@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KG26koSna6lo4MDkhjPdPKoYe+B+2J1H8Fvl98dE2sTghBIy/MuRoPxxn0BZKfyedsN02OWrn+oBHUQ8/DiFtQ==",
+  "dgSpecHash": "MeyQGvW489IW+lSiJRHOowgixQo+Ia+Yb33tpspNtrypxkodJum4DoWyS4WbCWtYRae839KuqIL7RrRRr3PpGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\Organizee\\Api\\Api.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,8 @@
     "C:\\Users\\adamo\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\adamo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\adamo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
-    "C:\\Users\\adamo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\adamo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\adamo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }
