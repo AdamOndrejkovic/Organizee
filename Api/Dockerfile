@@ -6,7 +6,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Api.csproj", "Api/"]
-COPY ["Core/Core.csproj", "Core/"]
+COPY ["/Core/Core.csproj", "Core/"]
 COPY ["Domain.csproj", "Domain/"]
 COPY ["DataAccess.csproj", "DataAccess/"]
 COPY ["Security.csproj", "Security/"]
