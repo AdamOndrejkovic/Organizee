@@ -28,12 +28,7 @@ pipeline {
         stage("Build Api"){
             when {
                 anyOf {
-                    changeset "Api/**"
-                    changeset "Domain.Test/**"
-                    changeset "Domain/**"
-                    changeset "DataAccess/**"
-                    changeset "Core.Test/**"
-                    changeset "Core/**"
+                    changeset "**"
                 }
             }
             steps {
