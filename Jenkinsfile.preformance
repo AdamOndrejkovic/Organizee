@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    parameters {
+        run filter: 'SUCCESSFUL', name: 'PROMOTED_BUILD', projectName: 'OrganizeeApi'
+    }
+    stages {
+        stage("Deploy to production") {
+            steps {
+                echo 'Running K6 performance tests...'
+                sh 'k6 run k6-test/load-test.js'
+            }
+        }
+    }
+}
