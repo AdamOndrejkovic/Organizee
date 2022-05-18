@@ -42,7 +42,7 @@ pipeline {
                     sh "dotnet build --configuration Release"
                     sh "export HISTIGNORE='*sudo -S*'"
                         withCredentials([string(credentialsId: 'Password', variable: 'PASSWORD')]) {
-                            sh "echo "${PASSWORD}" | sudo -S -v"
+                            echo ""${PASSWORD}" | sudo -S -v"
                     }
                     sh "sudo dotnet publish -c Release -o /app/publish"
                 }
