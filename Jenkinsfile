@@ -40,7 +40,7 @@ pipeline {
                 echo "We are building"
                 dir("Api"){
                     sh "dotnet build --configuration Release"
-                    sh "dotnet publish -c Release -o /app/publish"
+                    sh "sudo dotnet publish -c Release -o /app/publish"
                 }
                 sh "docker-compose --env-file config/Test.env build api"
             }

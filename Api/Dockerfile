@@ -5,5 +5,5 @@ EXPOSE 443
 
 FROM base AS final
 WORKDIR /app
-COPY /publish .
+COPY /app/publish .
 ENTRYPOINT ["dotnet", "Api.dll"]
