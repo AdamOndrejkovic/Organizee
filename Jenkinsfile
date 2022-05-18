@@ -43,7 +43,7 @@ pipeline {
                     sh "export HISTIGNORE='*sudo -S*'"
                         withCredentials([string(credentialsId: 'Password', variable: 'PASSWORD')]) {
                             echo ""${PASSWORD}" | sudo -S -v"
-                    }
+                        }
                     sh "sudo dotnet publish -c Release -o /app/publish"
                 }
                 sh "docker-compose --env-file config/Test.env build api"
