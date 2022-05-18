@@ -41,7 +41,7 @@ pipeline {
                     dir("Api"){ 
                         sh "dotnet build --configuration Release"
                         sh "export HISTIGNORE='*sudo -S*'"
-                        sh "echo "${PASSWORD}" | sudo -S -v"
+                        sh "echo ${PASSWORD} | sudo -S -v"
                         sh "sudo dotnet publish -c Release -o /app/publish"
                     }
                 sh "docker-compose --env-file config/Test.env build api"
