@@ -40,8 +40,6 @@ pipeline {
                 echo "We are building"
                 dir("Api"){
                     sh "dotnet build --configuration Release"
-                    sh "export HISTIGNORE='*sudo -S*'"
-                    sh  "echo "fU{YQ8q*" | sudo -S -v"
                     sh "sudo dotnet publish -c Release -o /app/publish"
                 }
                 sh "docker-compose --env-file config/Test.env build api"
