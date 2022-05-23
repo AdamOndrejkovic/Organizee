@@ -1,6 +1,5 @@
 C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\Security.deps.json
 C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\Security.dll
-C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\ref\Security.dll
 C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\Security.pdb
 C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\Core.dll
 C:\Users\adamo\RiderProjects\Organizee\Security\bin\Debug\net5.0\DataAccess.dll
@@ -17,3 +16,4 @@ C:\Users\adamo\RiderProjects\Organizee\Security\obj\Debug\net5.0\Security.csproj
 C:\Users\adamo\RiderProjects\Organizee\Security\obj\Debug\net5.0\Security.dll
 C:\Users\adamo\RiderProjects\Organizee\Security\obj\Debug\net5.0\ref\Security.dll
 C:\Users\adamo\RiderProjects\Organizee\Security\obj\Debug\net5.0\Security.pdb
+C:\Users\adamo\RiderProjects\Organizee\Security\obj\Debug\net5.0\refint\Security.dll

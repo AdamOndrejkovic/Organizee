@@ -5,7 +5,6 @@ C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.deps.json
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.runtimeconfig.json
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.runtimeconfig.dev.json
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.dll
-C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\ref\Api.dll
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.pdb
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
 C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
@@ -51,7 +50,6 @@ C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.csproj.CoreCompi
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\staticwebassets\Api.StaticWebAssets.Manifest.cache
-C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\staticwebassets\Api.StaticWebAssets.xml
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\scopedcss\bundle\Api.styles.css
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.RazorTargetAssemblyInfo.cache
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.csproj.CopyComplete
@@ -59,3 +57,5 @@ C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.dll
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\ref\Api.dll
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.pdb
 C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\Api.genruntimeconfig.cache
+C:\Users\adamo\RiderProjects\Organizee\Api\bin\Debug\net5.0\Api.StaticWebAssets.xml
+C:\Users\adamo\RiderProjects\Organizee\Api\obj\Debug\net5.0\refint\Api.dll

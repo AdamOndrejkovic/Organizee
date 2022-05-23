@@ -1,6 +1,5 @@
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\DataAccess.dll
-C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\DataAccess.pdb
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\Core.dll
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\bin\Debug\net5.0\Domain.dll
@@ -15,3 +14,4 @@ C:\Users\adamo\RiderProjects\Organizee\DataAccess\obj\Debug\net5.0\DataAccess.cs
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\adamo\RiderProjects\Organizee\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\adamo\RiderProjects\Organizee\DataAccess\obj\Debug\net5.0\refint\DataAccess.dll

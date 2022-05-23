@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Api/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
           "Security": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
