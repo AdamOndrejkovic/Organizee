@@ -4,7 +4,7 @@ services:
   api:
     build:
       context: "Api"
-    image: "localhost:3000/organizee:${IMAGE_TAG}"
+    image: "localhost:7002/organizee:${IMAGE_TAG}"
     container_name: "${API_CONT_NAME}"
     ports:
       - "${API_PORT}:80"
