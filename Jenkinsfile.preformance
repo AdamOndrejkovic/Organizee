@@ -4,10 +4,36 @@ pipeline {
         run filter: 'SUCCESSFUL', name: 'PROMOTED_BUILD', projectName: 'OrganizeeApi'
     }
     stages {
-        stage("Deploy to production") {
+        stage("Smoke testing") {
+            steps {
+                echo 'Running K6 performance tests...'
+                sh 'k6 run k6-test/smoke-test.js'
+            }
+        }
+        stage("Load testing") {
             steps {
                 echo 'Running K6 performance tests...'
                 sh 'k6 run k6-test/load-test.js'
+            }
+        }
+        stage("Stress testing") {
+            steps {
+                echo 'Running K6 performance tests...'
+                sh 'k6 run k6-test/stress-test.js'
+            }
+        }
+        stage("Soak testing") {
+            steps {
+                echo 'Running K6 performance tests...'
+                sh 'k6 run k6-test/soak-test.js'
+            }
+        }
+    }
+    post {
+        always {
+            withCredentials([string(credentialsId: 'DiscordWebHook', variable: 'WEBHOOK_URL')]) {
+                sh "echo 'Performance testing finished!'"
+                discordSend description: "Performance testing finished", footer: "The pipeline has finished!", link: env.Build_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "${WEBHOOK_URL}"
             }
         }
     }
