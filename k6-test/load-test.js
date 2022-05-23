@@ -9,22 +9,21 @@ export const options = {
   ],
   thresholds: {
     'http_req_duration': ['p(99)<1500'], // 99% of requests must complete below 1.5s
-    'logged in successfully': ['p(99)<1500'], // 99% of requests must complete below 1.5s
   },
 };
 
-const BASE_URL = 'https://test-api.k6.io';
-const USERNAME = 'TestUser';
-const PASSWORD = 'SuperCroc2020';
+const BASE_URL = 'http://devops.adam-dev.eu:8091';
+const USERNAME = 'test';
+const PASSWORD = 'test123';
 
 export default () => {
-  const loginRes = http.post(`${BASE_URL}/auth/token/login/`, {
-    username: USERNAME,
+  const loginRes = http.post(`${BASE_URL}/api/Auth/Login`, {
+    name: USERNAME,
     password: PASSWORD,
   });
 
   check(loginRes, {
-    'logged in successfully': (resp) => resp.json('access') !== '',
+    'http_req_duration': (resp) => resp.json('access') !== '',
   });
 
   const authHeaders = {
@@ -33,8 +32,8 @@ export default () => {
     },
   };
 
-  const myObjects = http.get(`${BASE_URL}/my/crocodiles/`, authHeaders).json();
-  check(myObjects, { 'retrieved crocodiles': (obj) => obj.length > 0 });
+  const myObjects = http.get(`${BASE_URL}/api/Todo`, authHeaders).json();
+  check(myObjects, { 'retrieved todos': (obj) => obj.length > 0 });
 
   sleep(1);
 };

@@ -8,15 +8,14 @@ export const options = {
     { duration: '2m', target: 0 }, // scale down. (optional)
   ],
 };
-
-const API_BASE_URL = 'https://test-api.k6.io';
+const BASE_URL = 'http://devops.adam-dev.eu:8091';
 
 export default function () {
   http.batch([
-    ['GET', `${API_BASE_URL}/public/crocodiles/1/`],
-    ['GET', `${API_BASE_URL}/public/crocodiles/2/`],
-    ['GET', `${API_BASE_URL}/public/crocodiles/3/`],
-    ['GET', `${API_BASE_URL}/public/crocodiles/4/`],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
   ]);
 
   sleep(1);

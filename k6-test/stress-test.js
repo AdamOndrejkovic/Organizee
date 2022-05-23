@@ -16,13 +16,13 @@ export const options = {
 };
 
 export default function () {
-  const BASE_URL = 'https://test-api.k6.io'; // make sure this is not production
+  const BASE_URL = 'http://devops.adam-dev.eu:8091';
 
   const responses = http.batch([
-    ['GET', `${BASE_URL}/public/crocodiles/1/`, null, { tags: { name: 'PublicCrocs' } }],
-    ['GET', `${BASE_URL}/public/crocodiles/2/`, null, { tags: { name: 'PublicCrocs' } }],
-    ['GET', `${BASE_URL}/public/crocodiles/3/`, null, { tags: { name: 'PublicCrocs' } }],
-    ['GET', `${BASE_URL}/public/crocodiles/4/`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
+    ['GET', `${BASE_URL}/api/Todo`, null, { tags: { name: 'PublicCrocs' } }],
   ]);
 
   sleep(1);
