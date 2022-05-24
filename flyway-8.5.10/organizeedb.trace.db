@@ -1,2 +1,36 @@
 2022-05-11 10:15:26 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-210]
+2022-05-24 15:45:05 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create Table Todos\000d\000a(\000d\000a    Id int not null\000d\000a        constraint PK_Todos\000d\000a            primary key [*]autoincrement,\000d\000a    UserId      int not null,\000d\000a    Title       varchar(100),\000d\000a    Description varchar(500),\000d\000a    Complete    int not null\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create Table Todos
+(
+    Id int not null
+        constraint PK_Todos
+            primary key autoincrement,
+    UserId      int not null,
+    Title       varchar(100),
+    Description varchar(500),
+    Complete    int not null
+) [42001-210]
+2022-05-24 15:51:04 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table Users\000d\000a(\000d\000a    Id             INTEGER not null\000d\000a        constraint PK_Users\000d\000a            primary key [*]autoincrement,\000d\000a    Name           TEXT,\000d\000a    HashedPassword TEXT,\000d\000a    Salt           TEXT\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table Users
+(
+    Id             INTEGER not null
+        constraint PK_Users
+            primary key autoincrement,
+    Name           TEXT,
+    HashedPassword TEXT,
+    Salt           TEXT
+) [42001-210]
+2022-05-24 15:55:41 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table Users\000d\000a(\000d\000a    Id             int [*]autoincrement,\000d\000a    Name           varchar(100),\000d\000a    HashedPassword varchar(100),\000d\000a    Salt           varchar(50),\000d\000a    constraint PK_Users\000d\000a            primary key (Id)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, DEFAULT, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table Users
+(
+    Id             int autoincrement,
+    Name           varchar(100),
+    HashedPassword varchar(100),
+    Salt           varchar(50),
+    constraint PK_Users
+            primary key (Id)
+) [42001-210]
